@@ -1,10 +1,9 @@
 /* ============================================
-   IEEE NEMS 2027 - 共用元件（Header / Footer）
-   透過 JS 動態載入，避免每頁重複維護
+   IEEE NEMS 2027 - V2 共用元件
+   Header / Footer / Page Banner / 語言系統
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 判斷是否在子頁面（pages/ 目錄下）
   const isSubpage = window.location.pathname.includes('/pages/');
   const prefix = isSubpage ? '../' : '';
   const pagePrefix = isSubpage ? '' : 'pages/';
@@ -14,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLanguageSystem();
 });
 
-/* --- 產生 Header HTML --- */
+/* --- Header --- */
 function injectHeader(prefix, pagePrefix) {
   const headerEl = document.getElementById('site-header');
   if (!headerEl) return;
@@ -82,60 +81,59 @@ function injectHeader(prefix, pagePrefix) {
   `;
 }
 
-/* --- 產生 Footer HTML --- */
+/* --- Footer --- */
 function injectFooter() {
   const footerEl = document.getElementById('site-footer');
   if (!footerEl) return;
 
   footerEl.innerHTML = `
-    <div class="footer-orgs">
+    <hr class="gradient-divider">
+    <div class="footer-main">
       <div class="container">
-        <span class="org-label" data-i18n="footer.organized">Organized by</span>
-        <span style="font-weight:600;">IEEE</span>
-        <span>|</span>
-        <span style="font-weight:600;">IEEE Nanotechnology Council</span>
-        <span>|</span>
-        <span style="font-weight:600;">National Tsing Hua University</span>
+        <div class="footer-content">
+          <div class="footer-orgs">
+            <span class="org-label" data-i18n="footer.organized">Organized by</span>
+            <span style="font-weight:700; font-size:1.1rem;">IEEE</span>
+            <span style="opacity:0.5;">|</span>
+            <span style="font-weight:600; font-size:0.9rem;">IEEE Nanotechnology Council</span>
+            <span style="opacity:0.5;">|</span>
+            <span style="font-weight:600; font-size:0.9rem;">National Tsing Hua University</span>
+          </div>
+          <div class="footer-social">
+            <span style="font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Follow Us</span>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span data-i18n="footer.copyright">Copyright © 2027 IEEE-NEMS 2027. All rights reserved.</span>
+        </div>
       </div>
-    </div>
-    <div class="footer-copyright">
-      <span data-i18n="footer.copyright">Copyright © 2027 IEEE-NEMS 2027. All rights reserved.</span>
     </div>
   `;
 }
 
-/* --- 語言切換系統 --- */
+/* --- 語言系統 --- */
 function initLanguageSystem() {
-  // 讀取使用者偏好語言（預設英文）
   const savedLang = localStorage.getItem('nems2027-lang') || 'en';
   setLanguage(savedLang);
 
-  // 綁定切換按鈕
   const toggleBtn = document.getElementById('langToggle');
   if (toggleBtn) {
     toggleBtn.addEventListener('click', () => {
       const current = localStorage.getItem('nems2027-lang') || 'en';
-      const next = current === 'en' ? 'zh' : 'en';
-      setLanguage(next);
+      setLanguage(current === 'en' ? 'zh' : 'en');
     });
   }
 }
 
-/* --- 設定語言並更新所有翻譯 --- */
 function setLanguage(lang) {
   localStorage.setItem('nems2027-lang', lang);
 
-  // 更新按鈕標籤
   const label = document.getElementById('langLabel');
-  if (label) {
-    label.textContent = lang === 'en' ? 'EN' : '中';
-  }
+  if (label) label.textContent = lang === 'en' ? 'EN' : '中';
 
-  // 更新所有帶 data-i18n 屬性的元素
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (TRANSLATIONS[key] && TRANSLATIONS[key][lang]) {
-      // 如果翻譯內容包含 HTML 標籤，用 innerHTML；否則用 textContent
       const text = TRANSLATIONS[key][lang];
       if (text.includes('<')) {
         el.innerHTML = text;
@@ -145,6 +143,5 @@ function setLanguage(lang) {
     }
   });
 
-  // 更新 html lang 屬性
   document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
 }

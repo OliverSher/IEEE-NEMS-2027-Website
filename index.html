@@ -7,7 +7,7 @@
   <meta name="description" content="The 22nd IEEE International Conference on Nano/Micro Engineered and Molecular Systems — Hsinchu, Taiwan">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -15,37 +15,59 @@
 
   <header id="site-header" class="site-header"></header>
 
-  <!-- ====== Hero Banner ====== -->
+  <!-- ====== Hero Banner + Particles ====== -->
   <section class="hero-banner">
+    <div id="particles-js"></div>
+    <div class="hero-bg-image" style="background-image: url('assets/images/backgrounds/nano-bg.jpg');"></div>
     <div class="hero-overlay">
-      <p class="conference-series" data-i18n="home.series">The 22nd Annual IEEE International Conference on</p>
-      <h2>IEEE-NEMS 2027</h2>
-      <p class="conference-full-name" data-i18n="home.fullname">Nano/Micro Engineered and Molecular Systems</p>
-      <p class="conference-info">
+      <p class="conference-series" data-aos="fade-in" data-i18n="home.series">The 22nd Annual IEEE International Conference on</p>
+      <h2 data-aos="fade-up" data-aos-delay="200">IEEE-NEMS 2027</h2>
+      <p class="conference-full-name" data-aos="fade-up" data-aos-delay="400" data-i18n="home.fullname">Nano/Micro Engineered and Molecular Systems</p>
+      <p class="conference-info" data-aos="fade-up" data-aos-delay="500">
         <i class="fas fa-calendar-alt"></i> TBD, 2027
         <span class="divider">|</span>
         <i class="fas fa-map-marker-alt"></i> Hsinchu, Taiwan
       </p>
-      <p class="conference-info" style="font-size: 0.95rem; opacity: 0.85; margin-top: 6px;" data-i18n="home.venue">
-        National Tsing Hua University
-      </p>
-    </div>
-  </section>
-
-  <!-- ====== 公告框 ====== -->
-  <section class="section">
-    <div class="container">
-      <div class="announcement-box">
-        <strong data-i18n="home.welcome-title">Welcome to IEEE-NEMS 2027!</strong><br>
-        <span data-i18n="home.welcome-text">The 22nd IEEE International Conference on Nano/Micro Engineered and Molecular Systems will be held at <strong>National Tsing Hua University, Hsinchu, Taiwan</strong>.</span>
+      <p class="hero-venue" data-aos="fade-up" data-aos-delay="600" data-i18n="home.venue">National Tsing Hua University</p>
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="700">
+        <a href="pages/call-for-papers.html" class="btn btn-primary" data-i18n="nav.cfp">Call for Papers</a>
+        <a href="pages/registration.html" class="btn btn-secondary" data-i18n="nav.registration">Registration</a>
       </div>
     </div>
   </section>
 
-  <!-- ====== 簡介 ====== -->
-  <section class="section">
+  <!-- ====== 統計數字橫幅 ====== -->
+  <section class="stats-bar">
     <div class="container">
-      <p data-i18n="home.intro">
+      <div class="stats-grid">
+        <div class="stat-item" data-aos="fade-up">
+          <div class="stat-number" data-count-to="22">0</div>
+          <div class="stat-label">Years of NEMS</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number" data-count-to="10" data-count-suffix="+">0</div>
+          <div class="stat-label">Research Topics</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number" data-count-to="20" data-count-suffix="+">0</div>
+          <div class="stat-label">Countries</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number" data-count-to="500" data-count-suffix="+">0</div>
+          <div class="stat-label">Expected Attendees</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 歡迎區塊 ====== -->
+  <section class="section section-trim-purple">
+    <div class="container">
+      <div class="announcement-box" data-aos="fade-up">
+        <strong data-i18n="home.welcome-title">Welcome to IEEE-NEMS 2027!</strong><br>
+        <span data-i18n="home.welcome-text">The 22nd IEEE International Conference on Nano/Micro Engineered and Molecular Systems will be held at <strong>National Tsing Hua University, Hsinchu, Taiwan</strong>.</span>
+      </div>
+      <p data-aos="fade-up" data-aos-delay="100" data-i18n="home.intro">
         IEEE-NEMS is a premier international conference sponsored by the
         <strong>IEEE Nanotechnology Council</strong>. Since its inaugural edition in 2006 in Zhuhai, China,
         the conference has grown to be one of the most important forums for researchers and
@@ -54,11 +76,61 @@
     </div>
   </section>
 
+  <!-- ====== 研究主題（SIGGRAPH 發光卡） ====== -->
+  <section class="section" style="background: var(--color-navy); padding: 50px 0;">
+    <div class="container">
+      <h2 class="section-title white" data-aos="fade-up" data-i18n="cfp.topics">Topics of Interest</h2>
+      <p class="section-subtitle white" data-aos="fade-up" data-aos-delay="100">Explore the research areas covered at IEEE-NEMS 2027</p>
+      <div class="topics-grid">
+        <div class="topic-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="topic-icon"><i class="fas fa-microchip"></i></div>
+          <span class="topic-name" data-i18n="cfp.topic1">Micro/Nano Electro-Mechanical Systems (M/NEMS)</span>
+        </div>
+        <div class="topic-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="topic-icon"><i class="fas fa-cogs"></i></div>
+          <span class="topic-name" data-i18n="cfp.topic2">Micro/Nano/Molecular Fabrication</span>
+        </div>
+        <div class="topic-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="topic-icon"><i class="fas fa-atom"></i></div>
+          <span class="topic-name" data-i18n="cfp.topic3">Nanomaterials</span>
+        </div>
+        <div class="topic-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="topic-icon"><i class="fas fa-project-diagram"></i></div>
+          <span class="topic-name" data-i18n="cfp.topic4">Nanomaterial-Based Devices and Systems</span>
+        </div>
+        <div class="topic-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="topic-icon"><i class="fas fa-lightbulb"></i></div>
+          <span class="topic-name" data-i18n="cfp.topic5">Nanophotonics and Nanoscale Imaging</span>
+        </div>
+        <div class="topic-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="topic-icon"><i class="fas fa-robot"></i></div>
+          <span class="topic-name" data-i18n="cfp.topic6">Nanoscale Robotics, Assembly, and Automation</span>
+        </div>
+        <div class="topic-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="topic-icon"><i class="fas fa-wave-square"></i></div>
+          <span class="topic-name" data-i18n="cfp.topic7">Molecular Sensors, Actuators, and Systems</span>
+        </div>
+        <div class="topic-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="topic-icon"><i class="fas fa-water"></i></div>
+          <span class="topic-name" data-i18n="cfp.topic8">Micro/Nano Fluidics</span>
+        </div>
+        <div class="topic-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="topic-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+          <span class="topic-name" data-i18n="cfp.topic9">Micro/Nano Mechanics</span>
+        </div>
+        <div class="topic-card" data-aos="fade-up" data-aos-delay="450">
+          <div class="topic-icon"><i class="fas fa-dna"></i></div>
+          <span class="topic-name" data-i18n="cfp.topic10">Nanobiology / Nanomedicine</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ====== What's New + Important Dates ====== -->
-  <section class="section section-alt">
+  <section class="section section-trim-cyan">
     <div class="container">
       <div class="two-col">
-        <div>
+        <div data-aos="fade-right">
           <h2 class="content-h2" data-i18n="home.whatsnew">What's New</h2>
           <ul class="news-list">
             <li>
@@ -70,7 +142,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div data-aos="fade-left">
           <h2 class="content-h2" data-i18n="home.dates">Important Dates</h2>
           <ul class="dates-list">
             <li>
@@ -99,11 +171,22 @@
     </div>
   </section>
 
+  <!-- ====== CTA 區塊 ====== -->
+  <section class="gradient-section">
+    <div class="container" style="text-align: center;">
+      <h2 class="section-title white" data-aos="fade-up">Submit Your Research</h2>
+      <p class="section-subtitle white" data-aos="fade-up" data-aos-delay="100">Share your latest findings with the global nano/micro systems community</p>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <a href="pages/call-for-papers.html" class="btn btn-accent" data-i18n="nav.cfp">Call for Papers</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ====== 歷屆會議 ====== -->
-  <section class="section">
+  <section class="section section-trim-navy">
     <div class="container">
-      <h2 class="content-h2" data-i18n="home.history">Conference History</h2>
-      <ul class="history-list">
+      <h2 class="content-h2" data-aos="fade-up" data-i18n="home.history">Conference History</h2>
+      <ul class="history-list" data-aos="fade-up" data-aos-delay="100">
         <li><strong>2027</strong> — Hsinchu, Taiwan</li>
         <li><strong>2026</strong> — TBD</li>
         <li><strong>2025</strong> — Yinchuan, China</li>
@@ -133,16 +216,16 @@
   <!-- ====== 贊助商 ====== -->
   <section class="sponsors-section">
     <div class="container">
-      <h2 class="content-h2" data-i18n="home.organized">Organized by</h2>
-      <div class="sponsors-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 500px;">
+      <h2 class="content-h2" data-aos="fade-up" data-i18n="home.organized">Organized by</h2>
+      <div class="sponsors-grid" data-aos="fade-up" data-aos-delay="100" style="grid-template-columns: repeat(3, 1fr); max-width: 500px;">
         <div class="sponsor-card">
-          <span style="font-size:0.8rem; font-weight:700; color:#333;">IEEE</span>
+          <span style="font-size:0.85rem; font-weight:800; color:var(--color-navy);">IEEE</span>
         </div>
         <div class="sponsor-card">
-          <span style="font-size:0.7rem; font-weight:700; color:#333; text-align:center;">IEEE Nanotechnology Council</span>
+          <span style="font-size:0.7rem; font-weight:700; color:var(--color-navy); text-align:center;">IEEE Nanotechnology Council</span>
         </div>
         <div class="sponsor-card">
-          <span style="font-size:0.8rem; font-weight:700; color:#333;">NTHU</span>
+          <span style="font-size:0.85rem; font-weight:800; color:var(--color-navy);">NTHU</span>
         </div>
       </div>
     </div>
@@ -150,6 +233,49 @@
 
   <footer id="site-footer" class="site-footer"></footer>
 
+  <!-- Particles.js（分子網路粒子動畫） -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    // 粒子動畫設定 — 模擬分子網路結構
+    if (document.getElementById('particles-js')) {
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 900 } },
+          color: { value: ['#6300E2', '#00B4D8', '#FFB703', '#E2498A'] },
+          shape: { type: 'circle' },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: '#6300E2',
+            opacity: 0.2,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 1.2,
+            direction: 'none',
+            random: true,
+            out_mode: 'out'
+          }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: { enable: true, mode: 'grab' },
+            onclick: { enable: true, mode: 'push' },
+            resize: true
+          },
+          modes: {
+            grab: { distance: 140, line_linked: { opacity: 0.5 } },
+            push: { particles_nb: 3 }
+          }
+        },
+        retina_detect: true
+      });
+    }
+  </script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/components.js"></script>
   <script src="assets/js/main.js"></script>
