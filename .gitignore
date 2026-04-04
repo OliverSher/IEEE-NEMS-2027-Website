@@ -11,3 +11,15 @@ desktop.ini
 
 # Claude Code
 .claude/
+
+# 主辦方原始文件（機密，不上傳）
+國科會補助國內舉辦國際學術研討會*.docx
+ieee-nems-2027.pptx
+IEEE_NEMS_2027_資料準備清單.docx
+
+# 暫存檔
+_docx_raw.txt
+_pptx_raw.txt
+node_modules/
+package.json
+package-lock.json

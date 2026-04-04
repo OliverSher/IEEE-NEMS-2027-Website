@@ -264,8 +264,8 @@ const TRANSLATIONS = {
     zh: "搭乘台灣高鐵至<strong>高鐵新竹站</strong>（約 35 分鐘）"
   },
   "venue.airport3": {
-    en: "From HSR Hsinchu Station, take a taxi to NTHU (~20 minutes, ~NTD 250)",
-    zh: "從高鐵新竹站搭計程車至清大（約 20 分鐘，約 250 元）"
+    en: "From HSR Hsinchu Station, take a taxi to NTHU (~25 minutes)",
+    zh: "從高鐵新竹站搭計程車至清大（約 25 分鐘）"
   },
   "venue.from-taipei": { en: "From Taipei", zh: "從台北出發" },
   "venue.taipei1": {
@@ -278,8 +278,8 @@ const TRANSLATIONS = {
   },
   "venue.local": { en: "Local Transportation", zh: "市區交通" },
   "venue.local1": {
-    en: "Taxi from HSR Hsinchu Station to NTHU: ~20 minutes, ~NTD 250",
-    zh: "高鐵新竹站搭計程車至清大：約 20 分鐘，約 250 元"
+    en: "Taxi from HSR Hsinchu Station to NTHU: ~25 minutes",
+    zh: "高鐵新竹站搭計程車至清大：約 25 分鐘"
   },
   "venue.local2": {
     en: "Taxi from TRA Hsinchu Station to NTHU: ~NTD 200",
@@ -427,13 +427,13 @@ const TRANSLATIONS = {
 
   // === Plenary Speakers 頁 ===
   "plenary.title": { en: "Plenary Speakers", zh: "大會演講者" },
-  "plenary.coming": { en: "Plenary speaker information will be announced soon.", zh: "大會演講者資訊即將公布。" },
+  "plenary.coming": { en: "Details will be updated as confirmed.", zh: "詳細資訊確認後將更新。" },
 
   // === Keynote Speakers 頁 ===
   "keynote.title": { en: "Keynote Speakers", zh: "主題演講者" },
-  "keynote.coming": { en: "Keynote speaker information will be announced soon.", zh: "主題演講者資訊即將公布。" },
+  "keynote.coming": { en: "Details will be updated as confirmed.", zh: "詳細資訊確認後將更新。" },
 
   // === Invited Sessions 頁 ===
   "invited.title": { en: "Invited Sessions", zh: "邀請場次" },
-  "invited.coming": { en: "Invited session information will be announced soon.", zh: "邀請場次資訊即將公布。" },
+  "invited.coming": { en: "Details will be updated as confirmed.", zh: "詳細資訊確認後將更新。" },
 };
