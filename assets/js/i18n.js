@@ -48,8 +48,8 @@ const TRANSLATIONS = {
     zh: "第 22 屆 IEEE 國際奈微米工程與分子系統研討會將於<strong>台灣新竹國立清華大學</strong>舉行。"
   },
   "home.intro": {
-    en: "IEEE-NEMS is a premier international conference sponsored by the <strong>IEEE Nanotechnology Council</strong>. Since its inaugural edition in 2006 in Zhuhai, China, the conference has grown to be one of the most important forums for researchers and practitioners in the fields of nano/micro engineered and molecular systems.",
-    zh: "IEEE-NEMS 是由 <strong>IEEE 奈米技術委員會 (Nanotechnology Council)</strong> 贊助的頂尖國際研討會。自 2006 年於中國珠海首次舉辦以來，已發展成為奈微米工程與分子系統領域中最重要的學術交流平台之一。"
+    en: "IEEE-NEMS is a premier international conference sponsored by the <strong>IEEE Nanotechnology Council</strong>. Since its inaugural edition in 2006, the conference has grown to be one of the most important forums for researchers and practitioners in the fields of nano/micro engineered and molecular systems.",
+    zh: "IEEE-NEMS 是由 <strong>IEEE 奈米技術委員會 (Nanotechnology Council)</strong> 贊助的頂尖國際研討會。自 2006 年首次舉辦以來，已發展成為奈微米工程與分子系統領域中最重要的學術交流平台之一。"
   },
   "home.whatsnew": { en: "What's New", zh: "最新消息" },
   "home.news-1": {
