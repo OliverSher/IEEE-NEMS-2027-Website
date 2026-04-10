@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ieee-nems-2027.ieeenems2027.workers.dev/sitemap.xml
